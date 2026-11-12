@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+/* Navigation */
+header {
+    background: #172554;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #dbeafe, #c7d2fe);
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #172554;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background: #3b82f6;
+}
+
+/* General sections */
+section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+/* Subject cards */
+.subject-container,
+.tip-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.subject-card,
+.tip-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s;
+}
+
+.subject-card:hover,
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.subject-card h3,
+.tip-card h3 {
+    margin-bottom: 12px;
+}
+
+.subject-card p,
+.tip-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Study tips */
+.tips {
+    background: #e0e7ff;
+}
+
+/* Task list */
+.task-box {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.task-box input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+}
+
+.task-box button {
+    padding: 12px 18px;
+    background: #172554;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.task-box button:hover {
+    background: #3b82f6;
+}
+
+#taskList {
+    margin-top: 20px;
+    list-style: none;
+}
+
+#taskList li {
+    background: #f1f5f9;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: anywhere;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.task-actions button {
+    padding: 7px 10px;
+}
+
+/* About */
+.about {
+    background: #dbeafe;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .task-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-box button {
+        width: 100%;
+    }
+}
